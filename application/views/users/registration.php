@@ -3,9 +3,12 @@
 	
     <!-- Status message -->
     <?php  
-        if(!empty($success_msg)){ 
+        if(!empty($success_msg))
+        { 
             echo '<p class="status-msg success">'.$success_msg.'</p>'; 
-        }elseif(!empty($error_msg)){ 
+        }
+        elseif(!empty($error_msg))
+        { 
             echo '<p class="status-msg error">'.$error_msg.'</p>'; 
         } 
     ?>
@@ -36,13 +39,16 @@
             <div class="form-group">
                 <label>Gender: </label>
                 <?php 
-                if(!empty($user['gender']) && $user['gender'] == 'Female'){ 
-                    $fcheck = 'checked="checked"'; 
-                    $mcheck = ''; 
-                }else{ 
-                    $mcheck = 'checked="checked"'; 
-                    $fcheck = ''; 
-                } 
+                    if(!empty($user['gender']) && $user['gender'] == 'Female')
+                    { 
+                        $fcheck = 'checked="checked"'; 
+                        $mcheck = ''; 
+                    }
+                    else
+                    { 
+                        $mcheck = 'checked="checked"'; 
+                        $fcheck = ''; 
+                    } 
                 ?>
                 <div class="radio">
                     <label>

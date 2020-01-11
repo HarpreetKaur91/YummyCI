@@ -26,19 +26,21 @@ class Users extends CI_Controller
         } 
     } 
  
-    public function account(){ 
+    public function account()
+    { 
         $data = array(); 
-        if($this->isUserLoggedIn){ 
-            $con = array( 
-                'id' => $this->session->userdata('userId') 
-            ); 
+        if($this->isUserLoggedIn)
+        { 
+            $con = array( 'id' => $this->session->userdata('userId') ); 
             $data['user'] = $this->user->getRows($con); 
              
             // Pass the user data and load view 
             $this->load->view('layouts/header', $data); 
             $this->load->view('users/account', $data); 
             $this->load->view('layouts/footer'); 
-        }else{ 
+        }
+        else
+        { 
             redirect('users/login'); 
         } 
     } 
@@ -136,7 +138,6 @@ class Users extends CI_Controller
             $this->load->view('users/registration', $data); 
             $this->load->view('layouts/footer'); 
         }
-        
     } 
      
     public function logout()
@@ -146,7 +147,6 @@ class Users extends CI_Controller
         $this->session->sess_destroy(); 
         redirect('users/login/'); 
     } 
-     
      
     // Existing email check during validation 
     public function email_check($str){ 

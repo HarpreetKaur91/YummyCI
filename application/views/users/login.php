@@ -3,9 +3,12 @@
 	
     <!-- Status message -->
     <?php  
-        if(!empty($success_msg)){ 
+        if(!empty($success_msg))
+        { 
             echo '<p class="status-msg success">'.$success_msg.'</p>'; 
-        }elseif(!empty($error_msg)){ 
+        }
+        elseif(!empty($error_msg))
+        { 
             echo '<p class="status-msg error">'.$error_msg.'</p>'; 
         } 
     ?>
@@ -22,7 +25,7 @@
                 <?php echo form_error('password','<p class="help-block">','</p>'); ?>
             </div>
             <div class="send-button">
-                <input type="submit" name="loginSubmit" class="btn btn-primary btn-block" value="LOGIN">
+                <input type="submit" name="loginSubmit" class="btn btn-primary" value="LOGIN">
             </div>
         </form>
         <p>Don't have an account? <a href="<?php echo base_url('users/registration'); ?>">Register</a></p>
