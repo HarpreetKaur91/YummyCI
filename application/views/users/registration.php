@@ -30,11 +30,11 @@
             </div>
             <div class="form-group">
                 <input type="password" name="password" class="form-control" placeholder="PASSWORD" required>
-                <?php echo form_error('password','<p class="help-block">','</p>'); ?>
+                <?php echo form_error('password','<p class="help-block text-danger">','</p>'); ?>
             </div>
             <div class="form-group">
                 <input type="password" name="conf_password" class="form-control" placeholder="CONFIRM PASSWORD" required>
-                <?php echo form_error('conf_password','<p class="help-block">','</p>'); ?>
+                <?php echo form_error('conf_password','<p class="help-block text-danger">','</p>'); ?>
             </div>
             <div class="form-group">
                 <label>Gender: </label>
@@ -63,7 +63,7 @@
             </div>
             <div class="form-group">
                 <input type="text" name="phone" class="form-control" placeholder="PHONE NUMBER" value="<?php echo !empty($user['phone'])?$user['phone']:''; ?>">
-                <?php echo form_error('phone','<p class="help-block">','</p>'); ?>
+                <?php echo form_error('phone','<p class="help-block text-danger">','</p>'); ?>
             </div>
             <div class="send-button">
                 <input type="submit" class="btn btn-primary btn-block" name="signupSubmit" value="CREATE ACCOUNT">

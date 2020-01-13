@@ -67,10 +67,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+<div class="container">
+	<!-- <h1>Welcome to CodeIgniter!</h1> -->
 
-	<div id="body">
+	<!-- div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 
 		<p>If you would like to edit this page you'll find it located at:</p>
@@ -82,7 +82,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php //echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p> -->
+	<div class="jumbotron">
+		<h2 class="display-3"> Admin Registration & Login</h2>
+		<hr>
+		<div class="my-4">
+			<div class="row">
+				<?php if($checkAdminExists):?>
+
+				<?php else:?>
+					<div class="col-lg-4">
+						<?php echo anchor("welcome/signup","Register",['class'=>'btn btn-primary']); ?>
+					</div>
+			<?php endif;?>
+				<div class="col-lg-4">
+					<?php echo anchor("welcome/login","Login",['class'=>'btn btn-primary']);?>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 </body>
